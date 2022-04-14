@@ -1,9 +1,12 @@
 package Calculator;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.Scanner;
+
 
 public class Calculator {
     private static final Scanner input = new Scanner(System.in);
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     public static void main(String[] args){
         Calculator calculator = new Calculator();
         int choice;
@@ -29,6 +32,7 @@ public class Calculator {
                     result = calculator.squareRoot(number);
 //                    System.out.println("The square root of [" + number + "] is [" + result + "]");
                     System.out.println("√" + number + " = " + result);
+                    logger.info("[SQRT] - INPUT : "+ number + " - OUTPUT : " + result);
                     System.out.println(" ");
                     System.out.println(" ");
                     break;
