@@ -11,12 +11,13 @@ public class Calculator {
     private static final Logger logger = LogManager.getLogger(Calculator.class);
     public static void main(String[] args){
         Calculator calculator = new Calculator();
-        int choice;
-        System.out.println("----------------------------------------------------------------");
-        System.out.println("                       Scientific Calculator                    ");
-        System.out.println("----------------------------------------------------------------");
-        System.out.println(" ");
+
         while (true){
+            int choice;
+            System.out.println("----------------------------------------------------------------");
+            System.out.println("                       Scientific Calculator                    ");
+            System.out.println("----------------------------------------------------------------");
+            System.out.println(" ");
             System.out.println("Choose an operation : ");
             System.out.println("1. Square Root");
             System.out.println("2. Exit");
@@ -40,7 +41,16 @@ public class Calculator {
                     System.out.println("Enter a positive number to calculate square root : ");
 
                     number = input.nextDouble();
-                    result = calculator.squareRoot(number);
+                    if (number>=0){
+                        result = calculator.squareRoot(number);
+                    }
+                    else{
+                        System.out.println("Positive Numbers only!!");
+                        logger.error("Not a positive number");
+                        break;
+                    }
+
+
 //                    System.out.println("The square root of [" + number + "] is [" + result + "]");
                     System.out.println("√" + number + " = " + result);
                     logger.info("[SQRT] - INPUT : "+ number + " - OUTPUT : " + result);
