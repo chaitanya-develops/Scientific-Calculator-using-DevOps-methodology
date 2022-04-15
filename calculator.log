@@ -4,3 +4,7 @@
 14/Apr/2022:05:32:33 724 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 1.23456787654321E14 - OUTPUT : 1.1111111E7
 14/Apr/2022:05:33:26 349 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 1.2345654321E10 - OUTPUT : 111111.0
 14/Apr/2022:05:33:43 772 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 121.0 - OUTPUT : 11.0
+16/Apr/2022:00:12:12 342 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 323.0 - OUTPUT : 17.97220075561143
+16/Apr/2022:00:27:36 745 [Calculator.java] [ERROR] Calculator.Calculator - [Error] : null
+16/Apr/2022:00:28:03 514 [Calculator.java] [ERROR] Calculator.Calculator - [Error] : java.util.InputMismatchException
+16/Apr/2022:00:28:36 498 [Calculator.java] [ERROR] Calculator.Calculator - java.util.InputMismatchException
