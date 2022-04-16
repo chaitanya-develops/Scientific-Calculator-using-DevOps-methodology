@@ -42,4 +42,16 @@ public class CalculatorTest {
         assertNotEquals("Finding logarithm of a number for False Negative", 10.0, calculator.naturalLog(1), DELTA);
     }
 
+    @Test
+    public void powerTruePositive(){
+        assertEquals("Finding logarithm of a number for True Positive", 8.0, calculator.powerFunction(2,3), DELTA);
+        assertEquals("Finding logarithm of a number for True Positive", 1.0, calculator.powerFunction(1,8), DELTA);
+    }
+
+    @Test
+    public void powerTrueNegative(){
+        assertNotEquals("Finding logarithm of a number for False Negative", 5.0, calculator.naturalLog(2), DELTA);
+        assertNotEquals("Finding logarithm of a number for False Negative", 10.0, calculator.naturalLog(1), DELTA);
+    }
+
 }
