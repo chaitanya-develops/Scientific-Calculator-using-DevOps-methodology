@@ -14,8 +14,8 @@ public class CalculatorTest {
 
     @Test
     public void squareRootTrueNegative(){
-        assertNotEquals("Finding square root for False Negative", 5.0, calculator.squareRoot(125), DELTA);
-        assertNotEquals("Finding square root for False Negative", 11.0, calculator.squareRoot(12321), DELTA);
+        assertNotEquals("Finding square root of a number for False Negative", 5.0, calculator.squareRoot(125), DELTA);
+        assertNotEquals("Finding square root of a number for False Negative", 11.0, calculator.squareRoot(12321), DELTA);
     }
 
     @Test
@@ -26,21 +26,20 @@ public class CalculatorTest {
 
     @Test
     public void factorialTrueNegative(){
-        assertNotEquals("Finding factorial for False Negative", 5.0, calculator.factorial(2), DELTA);
-        assertNotEquals("Finding factorial for False Negative", 0.0, calculator.factorial(1), DELTA);
+        assertNotEquals("Finding factorial of a number for False Negative", 5.0, calculator.factorial(2), DELTA);
+        assertNotEquals("Finding factorial of a number for False Negative", 0.0, calculator.factorial(1), DELTA);
     }
 
     @Test
     public void logarithmTruePositive(){
-        assertEquals("Finding factorial of a number for True Positive", 3.5263605246, calculator.naturalLog(34), DELTA);
-        assertEquals("Finding factorial of a number for True Positive", 0.0, calculator.naturalLog(1), DELTA);
+        assertEquals("Finding logarithm of a number for True Positive", 3.5263605246, calculator.naturalLog(34), DELTA);
+        assertEquals("Finding logarithm of a number for True Positive", 0.0, calculator.naturalLog(1), DELTA);
     }
 
     @Test
     public void logarithmTrueNegative(){
-        assertNotEquals("Finding factorial for False Negative", 5.0, calculator.naturalLog(2), DELTA);
-        assertNotEquals("Finding factorial for False Negative", 10.0, calculator.naturalLog(1), DELTA);
+        assertNotEquals("Finding logarithm of a number for False Negative", 5.0, calculator.naturalLog(2), DELTA);
+        assertNotEquals("Finding logarithm of a number for False Negative", 10.0, calculator.naturalLog(1), DELTA);
     }
-
 
 }
