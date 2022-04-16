@@ -4,5 +4,5 @@
   tasks:
     - name: Pull mini project calculator image
       docker_image:
-        name: chaitanyadevelops/scientific-calculator:2.0.0
+        name: chaitanyadevelops/scientific-calculator:latest
         source: pull
