@@ -21,7 +21,8 @@ public class Calculator {
             System.out.println("1. Square Root");
             System.out.println("2. Factorial");
             System.out.println("3. Natural Logarithm");
-            System.out.println("4. Exit");
+            System.out.println("4. Power Function");
+            System.out.println("5. Exit");
             try {
                 choice = input.nextInt();
             }
@@ -105,6 +106,25 @@ public class Calculator {
                     System.out.println(" ");
                     break;
                 case 4:
+                    double powerNumber1;
+                    double powerNumber2;
+                    double powerResult;
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("                       Power Function                           ");
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println(" ");
+                    System.out.println("Enter base number to calculate the power : ");
+                    powerNumber1 = input.nextDouble();
+                    System.out.println("Enter power to raise for the base number : ");
+                    powerNumber2 = input.nextDouble();
+                    powerResult = calculator.powerFunction(powerNumber1,powerNumber2);
+                    System.out.println( powerNumber1 + "^" + powerNumber2 + " = " + powerResult);
+                    logger.info("[POW] - INPUT : "+ powerNumber1 + "," +powerNumber2 + " - OUTPUT : " + powerResult);
+                    System.out.println(" ");
+                    System.out.println(" ");
+                    break;
+
+                case 5:
                     System.out.println("Exiting . . .");
                     return;
                 default:
@@ -128,5 +148,10 @@ public class Calculator {
     public double naturalLog(double number){
         return Math.log(number);
     }
+
+    public double powerFunction(double number1,double number2){
+        return Math.pow(number1,number2);
+    }
+
 
 }
