@@ -3,7 +3,7 @@ import Calculator.Calculator;
 import org.junit.Test;
 
 public class CalculatorTest {
-    private static final double DELTA = 1e-15;
+    private static final double DELTA = 1e-5;
     Calculator calculator = new Calculator();
 
     @Test
@@ -28,6 +28,18 @@ public class CalculatorTest {
     public void factorialTrueNegative(){
         assertNotEquals("Finding factorial for False Negative", 5.0, calculator.factorial(2), DELTA);
         assertNotEquals("Finding factorial for False Negative", 0.0, calculator.factorial(1), DELTA);
+    }
+
+    @Test
+    public void logarithmTruePositive(){
+        assertEquals("Finding factorial of a number for True Positive", 3.5263605246, calculator.naturalLog(34), DELTA);
+        assertEquals("Finding factorial of a number for True Positive", 0.0, calculator.naturalLog(1), DELTA);
+    }
+
+    @Test
+    public void logarithmTrueNegative(){
+        assertNotEquals("Finding factorial for False Negative", 5.0, calculator.naturalLog(2), DELTA);
+        assertNotEquals("Finding factorial for False Negative", 10.0, calculator.naturalLog(1), DELTA);
     }
 
 
