@@ -17,4 +17,18 @@ public class CalculatorTest {
         assertNotEquals("Finding square root for False Negative", 5.0, calculator.squareRoot(125), DELTA);
         assertNotEquals("Finding square root for False Negative", 11.0, calculator.squareRoot(12321), DELTA);
     }
+
+    @Test
+    public void factorialTruePositive(){
+        assertEquals("Finding factorial of a number for True Positive", 1.0, calculator.factorial(0), DELTA);
+        assertEquals("Finding factorial of a number for True Positive", 120.0, calculator.factorial(5), DELTA);
+    }
+
+    @Test
+    public void factorialTrueNegative(){
+        assertNotEquals("Finding factorial for False Negative", 5.0, calculator.factorial(2), DELTA);
+        assertNotEquals("Finding factorial for False Negative", 0.0, calculator.factorial(1), DELTA);
+    }
+
+
 }
