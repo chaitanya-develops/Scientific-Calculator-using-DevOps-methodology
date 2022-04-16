@@ -11,7 +11,6 @@ public class Calculator {
     private static final Logger logger = LogManager.getLogger(Calculator.class);
     public static void main(String[] args){
         Calculator calculator = new Calculator();
-
         while (true){
             int choice;
             System.out.println("----------------------------------------------------------------");
@@ -21,7 +20,8 @@ public class Calculator {
             System.out.println("Choose an operation : ");
             System.out.println("1. Square Root");
             System.out.println("2. Factorial");
-            System.out.println("3. Exit");
+            System.out.println("3. Natural Logarithm");
+            System.out.println("4. Exit");
             try {
                 choice = input.nextInt();
             }
@@ -81,8 +81,30 @@ public class Calculator {
                     System.out.println(" ");
                     System.out.println(" ");
                     break;
-
                 case 3:
+                    double logNumber;
+                    double logResult;
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("                       Natural Logarithm                        ");
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println(" ");
+                    System.out.println("Enter a positive number to calculate natural logarithm : ");
+                    logNumber = input.nextDouble();
+                    if(logNumber>=0){
+                        logResult = calculator.naturalLog(logNumber);
+                    }
+                    else{
+                        System.out.println("Positive numbers only !!!");
+                        logger.error("Not a positive number");
+                        break;
+                    }
+
+                    System.out.println("log("  + logNumber + ") = " + logResult);
+                    logger.info("[LOGe] - INPUT : "+ logNumber + " - OUTPUT : " + logResult);
+                    System.out.println(" ");
+                    System.out.println(" ");
+                    break;
+                case 4:
                     System.out.println("Exiting . . .");
                     return;
                 default:
@@ -101,6 +123,10 @@ public class Calculator {
             number--;
         }
         return result;
+    }
+
+    public double naturalLog(double number){
+        return Math.log(number);
     }
 
 }
