@@ -20,7 +20,8 @@ public class Calculator {
             System.out.println(" ");
             System.out.println("Choose an operation : ");
             System.out.println("1. Square Root");
-            System.out.println("2. Exit");
+            System.out.println("2. Factorial");
+            System.out.println("3. Exit");
             try {
                 choice = input.nextInt();
             }
@@ -32,17 +33,17 @@ public class Calculator {
 
             switch (choice){
                 case 1:
-                    double number;
-                    double result;
+                    double sqrtNumber;
+                    double sqrtResult;
                     System.out.println("----------------------------------------------------------------");
                     System.out.println("                       SQUARE ROOT                              ");
                     System.out.println("----------------------------------------------------------------");
                     System.out.println(" ");
                     System.out.println("Enter a positive number to calculate square root : ");
 
-                    number = input.nextDouble();
-                    if (number>=0){
-                        result = calculator.squareRoot(number);
+                    sqrtNumber = input.nextDouble();
+                    if (sqrtNumber>=0){
+                        sqrtResult = calculator.squareRoot(sqrtNumber);
                     }
                     else{
                         System.out.println("Positive Numbers only!!");
@@ -52,12 +53,36 @@ public class Calculator {
 
 
 //                    System.out.println("The square root of [" + number + "] is [" + result + "]");
-                    System.out.println("√" + number + " = " + result);
-                    logger.info("[SQRT] - INPUT : "+ number + " - OUTPUT : " + result);
+                    System.out.println("√" + sqrtNumber + " = " + sqrtResult);
+                    logger.info("[SQRT] - INPUT : "+ sqrtNumber + " - OUTPUT : " + sqrtResult);
                     System.out.println(" ");
                     System.out.println(" ");
                     break;
                 case 2:
+                    int factNumber;
+                    int factResult;
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("                       Factorial                                ");
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println(" ");
+                    System.out.println("Enter a positive integer to calculate factorial : ");
+                    factNumber = input.nextInt();
+                    if(factNumber>=0){
+                        factResult = calculator.factorial(factNumber);
+                    }
+                    else{
+                        System.out.println("Positive Integers only !!!");
+                        logger.error("Not a positive number");
+                        break;
+                    }
+
+                    System.out.println("!" + factNumber + " = " + factResult);
+                    logger.info("[FACT] - INPUT : "+ factNumber + " - OUTPUT : " + factResult);
+                    System.out.println(" ");
+                    System.out.println(" ");
+                    break;
+
+                case 3:
                     System.out.println("Exiting . . .");
                     return;
                 default:
@@ -67,6 +92,15 @@ public class Calculator {
     }
     public double squareRoot(double number){
         return Math.sqrt(number);
+    }
+
+    public Integer factorial(int number){
+        int result = 1;
+        while (number>0) {
+            result = result * number;
+            number--;
+        }
+        return result;
     }
 
 }
