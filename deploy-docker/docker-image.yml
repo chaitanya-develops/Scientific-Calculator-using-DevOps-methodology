@@ -3,6 +3,4 @@
   hosts: all
   tasks:
     - name: Pull mini project calculator image
-      docker_image:
-        name: chaitanyadevelops/scientific-calculator
-        source: pull
+      shell: docker pull chaitanyadevelops/scientific-calculator:latest
