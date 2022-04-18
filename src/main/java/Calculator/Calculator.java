@@ -28,7 +28,6 @@ public class Calculator {
             }
             catch (InputMismatchException ex) {
                 System.out.println("Wrong Input Choose from the given option only.");
-                logger.error(ex);
                 break;
             }
 
@@ -48,7 +47,7 @@ public class Calculator {
                     }
                     else{
                         System.out.println("Positive Numbers only!!");
-                        logger.error("Not a positive number");
+                        logger.info("[SQRT] - INPUT : "+ sqrtNumber + " - OUTPUT : " + "Not a positive number");
                         break;
                     }
 
@@ -73,7 +72,7 @@ public class Calculator {
                     }
                     else{
                         System.out.println("Positive Integers only !!!");
-                        logger.error("Not a positive number");
+                        logger.info("[FACT] - INPUT : "+ factNumber + " - OUTPUT : " + "Not a positive number");
                         break;
                     }
 
@@ -96,7 +95,7 @@ public class Calculator {
                     }
                     else{
                         System.out.println("Positive numbers only !!!");
-                        logger.error("Not a positive number");
+                        logger.info("[LOGe] - INPUT : "+ logNumber + " - OUTPUT : " + "Not a positive number");
                         break;
                     }
 
