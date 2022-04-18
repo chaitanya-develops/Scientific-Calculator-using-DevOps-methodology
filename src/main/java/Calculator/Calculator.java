@@ -136,6 +136,9 @@ public class Calculator {
     }
 
     public Integer factorial(int number){
+        if(number<0){
+            return -1;
+        }
         int result = 1;
         while (number>0) {
             result = result * number;
