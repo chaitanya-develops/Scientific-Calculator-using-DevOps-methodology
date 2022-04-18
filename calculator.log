@@ -5,6 +5,19 @@
 14/Apr/2022:05:33:26 349 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 1.2345654321E10 - OUTPUT : 111111.0
 14/Apr/2022:05:33:43 772 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 121.0 - OUTPUT : 11.0
 16/Apr/2022:00:12:12 342 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 323.0 - OUTPUT : 17.97220075561143
-16/Apr/2022:00:27:36 745 [Calculator.java] [ERROR] Calculator.Calculator - [Error] : null
-16/Apr/2022:00:28:03 514 [Calculator.java] [ERROR] Calculator.Calculator - [Error] : java.util.InputMismatchException
-16/Apr/2022:00:28:36 498 [Calculator.java] [ERROR] Calculator.Calculator - java.util.InputMismatchException
+16/Apr/2022:03:47:27 726 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : -324.0 - OUTPUT : NaN
+16/Apr/2022:05:11:54 668 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 12321.0 - OUTPUT : 111.0
+16/Apr/2022:05:15:24 571 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 21.0 - OUTPUT : 4.58257569495584
+16/Apr/2022:05:21:38 815 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 1232.0 - OUTPUT : 35.09985754956849
+16/Apr/2022:05:21:45 926 [Calculator.java] [INFO] Calculator.Calculator - [SQRT] - INPUT : 32.0 - OUTPUT : 5.656854249492381
+16/Apr/2022:06:11:09 149 [Calculator.java] [INFO] Calculator.Calculator - [FACT] - INPUT : 5 - OUTPUT : 120.0
+16/Apr/2022:06:11:22 717 [Calculator.java] [INFO] Calculator.Calculator - [FACT] - INPUT : 2 - OUTPUT : 2.0
+16/Apr/2022:06:12:09 412 [Calculator.java] [INFO] Calculator.Calculator - [FACT] - INPUT : 0 - OUTPUT : 1.0
+16/Apr/2022:06:16:15 307 [Calculator.java] [INFO] Calculator.Calculator - [FACT] - INPUT : 12 - OUTPUT : 479001600
+16/Apr/2022:06:16:32 285 [Calculator.java] [INFO] Calculator.Calculator - [FACT] - INPUT : 123 - OUTPUT : 0
+16/Apr/2022:18:06:54 172 [Calculator.java] [INFO] Calculator.Calculator - [LOG] - INPUT : 2.0 - OUTPUT : 0.6931471805599453
+16/Apr/2022:18:08:12 248 [Calculator.java] [INFO] Calculator.Calculator - [LOG] - INPUT : 2.7 - OUTPUT : 0.9932517730102834
+16/Apr/2022:18:08:53 683 [Calculator.java] [INFO] Calculator.Calculator - [LOGe] - INPUT : 2.73 - OUTPUT : 1.0043016091968684
+16/Apr/2022:19:16:40 346 [Calculator.java] [INFO] Calculator.Calculator - [POW] - INPUT : 2.0,3.0 - OUTPUT : 8.0
+16/Apr/2022:19:17:00 577 [Calculator.java] [INFO] Calculator.Calculator - [POW] - INPUT : -2.0,-4.0 - OUTPUT : 0.0625
+16/Apr/2022:19:19:04 396 [Calculator.java] [INFO] Calculator.Calculator - [FACT] - INPUT : 5 - OUTPUT : 120
